@@ -3,11 +3,18 @@
 <title>Ryan Cox - Webmaster</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif;
+color: white;
+background-color: rgb(84,84,84);}
+a {
+  color: white;
+}
+
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
 .w3-sidebar {width: 120px;background: #222;}
@@ -15,13 +22,33 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .webLink {height: 100%;width: 30%; padding: 0}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+#main{
+  margin-top: 40px;
+  text-align: center;
+}
+#about {margin-top: 80px;}
+#contact{text-align: center;}
+#profileImage{max-width: 80%;}
 </style>
+
+
 <body class="w3-black">
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<!-- Dropdown menu bar -->
+  <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" role="button" href="#" id="navbarDropdown" data-toggle="dropdown" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" href="#">
+        </span>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#about">About</a>
+        <a class="dropdown-item" href="#portfolio">Portfolio</a>
+        <a class="dropdown-item" href="#contact">Contact</a>
+      </div>
+  </nav>
+
+<!-- Removed below code referencing w3Schools; site down at time, so now ref to Bootstrap -->
+<!-- 
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
 
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
@@ -40,9 +67,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
   </a>
-</nav>
+</nav> -->
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<!-- Navbar on small screens (Hidden on medium and large screens)
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
@@ -50,25 +77,28 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <a href="#portfolio" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div>
-</div>
+</div> -->
 
 <!-- Page Content -->
-<div class="w3-padding-large" id="main">
+<div class="container" id="main">
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">It's</span> Me.</h1>
-    <a>Full Stack Web Developer.</p>
-    <img src="./images/johnDoe.jpg" alt="me" class="w3-round" width="50%">
-  </header>
-
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h1 class="w3-jumbo" id="home">It's Me.</h1>
+    <p>Full Stack Web Developer.</p>
+    <img src="./images/johnDoe.jpg" id="profileImage" class="img-fluid rounded mx-auto" alt="Responsive image">
+  
+</div>
+    <!-- About Section -->
+  <div class="container" id="about">
+    <hr style="width:90%" class="w3-opacity">
     <h2 class="w3-text-light-grey">Ryan Cox</h2>
-    <hr style="width:200px" class="w3-opacity">
+
     <p>Ryan Cox currently resides in Charlotte, NC. He recently completed the Full Stack Web Devlolpment Boot Camp, hosted by UNC Charlotte.
         He is currenlty looking to leverage these new found skills achieved from the boot camp and combine them with established problem solving skills gained from his Mechainical Engineering background.
         Allow Ryan to shape your web application dream into a reality!
     </p>
+    <br>
+    <hr style="width:90%" class="w3-opacity">
+    <br>
     <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
     <p class="w3-wide">Node.js</p>
     <p class="w3-wide">Bootstrap</p>
@@ -77,56 +107,51 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p class="w3-wide">React</p>
     <p class="w3-wide">Github</p>
     <br>
-    
-  
-
+    <br>
   <!-- End About Section -->
   </div>
-  
+
   <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="portfolio">
-    <h2 class="w3-text-light-grey">My Work</h2>
-    <hr style="width:200px" class="w3-opacity">
 
     <!-- Grid for photos -->
-      <div class="w3-row-padding" style="width:100%" >
-          <div class="w3-half s6 m6 l6" style="height: 100%">
+    <div class="container" style="width:100%" id="portfolio">
+      <h2>My Work</h2>
+      <div class="row" style="width:100%" >
+          <div class="col" style="height: 100%">
               <a href="https://scrape-so-hard.herokuapp.com/">
-                  <img src="./images/scrape.png" style="height: 350px; width: 100%"  href="https://scrape-so-hard.herokuapp.com/">
-                      <p>Stock News Web Scraper</p>
+                  <img class="rounded" src="./images/scrape.png" style="height: 350px; width: 100%"  href="https://scrape-so-hard.herokuapp.com/">
+                      <p class="text-center">Stock News Web Scraper</p>
               </a>
           </div>
-          <div class="w3-half s6 m6 l6 w3-center" style="height:100%">
+          <div class="col" style="height:100%">
               <a href="https://gameplanbootcamp.herokuapp.com/"> 
-                <img src="./images/gamePlan.jpg" style="width:100%; height:350px" href="https://gameplanbootcamp.herokuapp.com/">
-                    <p>Connect for a Night Out</p>
+                <img class="rounded" src="./images/gamePlan.jpg" style="width:100%; height:350px" href="https://gameplanbootcamp.herokuapp.com/">
+                    <p class="text-center">Connect for a Night Out</p>
               </a>
           </div> 
-      </div>
-
-      <div class="w3-row-padding" style="height:100%">
-          <div class="w3-half s6 m6 l6" style="height: 100%">
+          <div class="w-100"></div>
+          <div class="col" style="height: 100%">
             <a href="https://crc017-friendfinder.herokuapp.com/" class="webLink">
-              <img src="./images/friendFinder.jpg" style="width:100%; height:350px" href="https://crc017-friendfinder.herokuapp.com/">
-                  <p>Friend Finder App</p>
+              <img class="rounded" src="./images/friendFinder.jpg" style="width:100%; height:350px" href="https://crc017-friendfinder.herokuapp.com/">
+                  <p class="text-center">Friend Finder App</p>
             </a>
           </div>
-          <div class="w3-half s6 m6 l6" style="height: 100%">
+          <div class="col" style="height: 100%">
             <a href="https://ziptellall.herokuapp.com/" class="webLink">
-              <img src="./images/zipTellAll.jpeg" style="width:100%; height:350px" href="https://ziptellall.herokuapp.com/">
-                  <p>Zip Code Area Info</p>
+              <img class="rounded" src="./images/zipTellAll.jpeg" style="width:100%; height:350px" href="https://ziptellall.herokuapp.com/">
+                  <p class="text-center">Zip Code Area Info</p>
             </a>
           </div>
       </div>
+    </div>  
     <!-- End photo grid -->
 
   <!-- End Portfolio Section -->
-  </div>
-
   <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+  <div class="container" id="contact">
+    <hr style="width:90%" class="w3-opacity">
     <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
+
 
     <div class="w3-section">
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: (910)995-0903</p>
@@ -140,6 +165,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- END PAGE CONTENT -->
 </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>
