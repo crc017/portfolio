@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Ryan Cox - Webmaster</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif;
+body {font-family: "Montserrat", sans-serif;
 color: white;
-background-color: rgb(84,84,84);}
+background-image:url("./images/astronomyBeaut.jpg");
+background-repeat: no-repeat;
+background-color: rgb(84,84,84);
+background-size: 100% 100%;
+background-attachment: fixed;
+};
+background {
+  opacity: 0.5;
+}
+
 a {
   color: white;
 }
@@ -22,17 +40,39 @@ a {
 .webLink {height: 100%;width: 30%; padding: 0}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 
+.dropdown-menu{
+  background-color: rgb(84,84,84);
+}
+.dropdown-item{
+  color: white;
+}
+
+.workImage{
+  max-height: 350px;
+}
+
 #main{
   margin-top: 40px;
   text-align: center;
 }
 #about {margin-top: 80px;}
 #contact{text-align: center;}
-#profileImage{max-width: 80%;}
+#profileImageSection{
+  width: 100%;
+
+}
+#profileImage{
+  max-width: 70%;
+  max-height: 500px;
+  opacity: 0.9;
+  height: auto;
+  filter: blur(0px);
+  border: 10px solid black;
+}
 </style>
+</head>
 
-
-<body class="w3-black">
+<body >
 
 <!-- Dropdown menu bar -->
   <nav class="navbar navbar-dark bg-dark">
@@ -82,10 +122,11 @@ a {
 <!-- Page Content -->
 <div class="container" id="main">
   <!-- Header/Home -->
-    <h1 class="w3-jumbo" id="home">It's Me.</h1>
+    <h1 id="home">It's Me.</h1>
     <p>Full Stack Web Developer.</p>
-    <img src="./images/johnDoe.jpg" id="profileImage" class="img-fluid rounded mx-auto" alt="Responsive image">
-  
+    <div id="profileImageSection">
+      <img src="./images/vanKoba.jpg" id="profileImage" class="img-fluid rounded mx-auto invert" alt="Responsive image">
+    </div>
 </div>
     <!-- About Section -->
   <div class="container" id="about">
@@ -119,26 +160,26 @@ a {
       <div class="row" style="width:100%" >
           <div class="col" style="height: 100%">
               <a href="https://scrape-so-hard.herokuapp.com/">
-                  <img class="rounded" src="./images/scrape.png" style="height: 350px; width: 100%"  href="https://scrape-so-hard.herokuapp.com/">
+                  <img class="workImage rounded" src="./images/scrape.png" style="width: 100%; height:350px" alt="Responsive image" href="https://scrape-so-hard.herokuapp.com/">
                       <p class="text-center">Stock News Web Scraper</p>
               </a>
           </div>
-          <div class="col" style="height:100%">
+          <div class="col" style="height: 100%">
               <a href="https://gameplanbootcamp.herokuapp.com/"> 
-                <img class="rounded" src="./images/gamePlan.jpg" style="width:100%; height:350px" href="https://gameplanbootcamp.herokuapp.com/">
+                <img class="workImage rounded" src="./images/gamePlan.jpg" style="width:100%; height:350px" alt="Responsive image" href="https://gameplanbootcamp.herokuapp.com/">
                     <p class="text-center">Connect for a Night Out</p>
               </a>
           </div> 
           <div class="w-100"></div>
           <div class="col" style="height: 100%">
             <a href="https://crc017-friendfinder.herokuapp.com/" class="webLink">
-              <img class="rounded" src="./images/friendFinder.jpg" style="width:100%; height:350px" href="https://crc017-friendfinder.herokuapp.com/">
+              <img class="workImage rounded" src="./images/friendFinder.jpg" style="width:100%; height:350px" alt="Responsive image" href="https://crc017-friendfinder.herokuapp.com/">
                   <p class="text-center">Friend Finder App</p>
             </a>
           </div>
           <div class="col" style="height: 100%">
             <a href="https://ziptellall.herokuapp.com/" class="webLink">
-              <img class="rounded" src="./images/zipTellAll.jpeg" style="width:100%; height:350px" href="https://ziptellall.herokuapp.com/">
+              <img class="workImage rounded" src="./images/zipTellAll.jpeg" style="width:100%; height:350px" alt="Responsive image" href="https://ziptellall.herokuapp.com/">
                   <p class="text-center">Zip Code Area Info</p>
             </a>
           </div>
@@ -166,9 +207,10 @@ a {
 <!-- END PAGE CONTENT -->
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
 
 </body>
 </html>
