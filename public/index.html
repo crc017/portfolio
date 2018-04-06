@@ -8,7 +8,9 @@
 
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link href="https://fonts.googleapis.com/css?family=GFS+Didot|Rye|Vast+Shadow|Vollkorn+SC|Yeon+Sung" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script
@@ -24,7 +26,11 @@ background-repeat: no-repeat;
 background-color: rgb(84,84,84);
 background-size: 100% 100%;
 background-attachment: fixed;
-};
+}
+
+h2{
+  font-family: 'Vollkorn SC', serif;
+}
 background {
   opacity: 0.5;
 }
@@ -32,13 +38,6 @@ background {
 a {
   color: white;
 }
-
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-.webLink {height: 100%;width: 30%; padding: 0}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 
 .dropdown-menu{
   background-color: rgb(84,84,84);
@@ -51,7 +50,17 @@ a {
   max-height: 350px;
 }
 
-#main{
+.skillList{
+  text-align: center;
+}
+
+#main, #home{
+  /* font-family: 'Rye', cursive;
+  font-family: 'Yeon Sung', cursive;
+  font-family: 'GFS Didot', serif; */
+  /* font-family: 'Vast Shadow', cursive; */
+  font-family: 'Vollkorn SC', serif;
+  font-size: 150%;
   margin-top: 40px;
   text-align: center;
 }
@@ -62,12 +71,12 @@ a {
 
 }
 #profileImage{
-  max-width: 70%;
+  max-width: 80%;
   max-height: 500px;
   opacity: 0.9;
   height: auto;
   filter: blur(0px);
-  border: 10px solid black;
+  border: 2px solid #353535c2;
 }
 </style>
 </head>
@@ -87,66 +96,38 @@ a {
       </div>
   </nav>
 
-<!-- Removed below code referencing w3Schools; site down at time, so now ref to Bootstrap -->
-<!-- 
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#portfolio" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-power-off w3-xxlarge"></i>
-    <p>Portfolio</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav> -->
-
-<!-- Navbar on small screens (Hidden on medium and large screens)
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-  </div>
-</div> -->
 
 <!-- Page Content -->
 <div class="container" id="main">
   <!-- Header/Home -->
-    <h1 id="home">It's Me.</h1>
+    <h1>It's Me.</h1>
     <p>Full Stack Web Developer.</p>
     <div id="profileImageSection">
-      <img src="./images/vanKoba.jpg" id="profileImage" class="img-fluid rounded mx-auto invert" alt="Responsive image">
+      <img src="./images/vanKoba.jpg" id="profileImage" class="img-fluid rounded  mx-auto invert" alt="Responsive image">
     </div>
 </div>
     <!-- About Section -->
   <div class="container" id="about">
-    <hr style="width:90%" class="w3-opacity">
-    <h2 class="w3-text-light-grey">Ryan Cox</h2>
+    <hr style="width:90%">
+    <h2>Ryan Cox</h2>
 
     <p>Ryan Cox currently resides in Charlotte, NC. He recently completed the Full Stack Web Devlolpment Boot Camp, hosted by UNC Charlotte.
         He is currenlty looking to leverage these new found skills achieved from the boot camp and combine them with established problem solving skills gained from his Mechainical Engineering background.
         Allow Ryan to shape your web application dream into a reality!
     </p>
     <br>
-    <hr style="width:90%" class="w3-opacity">
+    <hr style="width:90%">
     <br>
-    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <p class="w3-wide">Node.js</p>
-    <p class="w3-wide">Bootstrap</p>
-    <p class="w3-wide">MySQL</p>
-    <p class="w3-wide">Mongo DB</p>
-    <p class="w3-wide">React</p>
-    <p class="w3-wide">Github</p>
+    <div>
+      <h2>My Skills</h2>
+      <br>
+      <p>Node.js</p>
+      <p>Bootstrap</p>
+      <p>MySQL</p>
+      <p>Mongo DB</p>
+      <p>React</p>
+      <p>Github</p>
+    </div>
     <br>
     <br>
   <!-- End About Section -->
@@ -157,6 +138,7 @@ a {
     <!-- Grid for photos -->
     <div class="container" style="width:100%" id="portfolio">
       <h2>My Work</h2>
+      <br>
       <div class="row" style="width:100%" >
           <div class="col" style="height: 100%">
               <a href="https://scrape-so-hard.herokuapp.com/">
@@ -190,11 +172,11 @@ a {
   <!-- End Portfolio Section -->
   <!-- Contact Section -->
   <div class="container" id="contact">
-    <hr style="width:90%" class="w3-opacity">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
+
+    <h2>Contact Me</h2>
 
 
-    <div class="w3-section">
+    <div>
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: (910)995-0903</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: crc017@yahoo.com</p>
     </div><br>

@@ -17,7 +17,7 @@ $("#main").mouseenter(function() {
             $("#profileImage").attr('src', './images/johnDoe.jpg');
             $("#profileImage").css({
                 opacity: '0.9',
-                filter: 'brightness(100%) grayscale(60%)'
+                filter: 'brightness(100%) grayscale(80%)'
             });
         });
 
