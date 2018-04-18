@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link href="https://fonts.googleapis.com/css?family=GFS+Didot|Rye|Vast+Shadow|Vollkorn+SC|Yeon+Sung" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.js"
@@ -53,6 +54,9 @@ a {
 .skillList{
   text-align: center;
 }
+.iconDiv{
+  width: 100%;
+}
 
 #main, #home{
   /* font-family: 'Rye', cursive;
@@ -78,6 +82,15 @@ a {
   filter: blur(0px);
   border: 2px solid #353535c2;
 }
+#skillIcon{
+  font-size: 80px;
+  margin: auto;
+}
+#customSkillIcon{
+  margin: auto;
+  width: 80px
+}
+
 </style>
 </head>
 
@@ -111,9 +124,9 @@ a {
     <hr style="width:90%">
     <h2>Ryan Cox</h2>
 
-    <p>Ryan Cox currently resides in Charlotte, NC. He recently completed the Full Stack Web Devlolpment Boot Camp, hosted by UNC Charlotte.
-        He is currenlty looking to leverage these new found skills achieved from the boot camp and combine them with established problem solving skills gained from his Mechainical Engineering background.
-        Allow Ryan to shape your web application dream into a reality!
+    <p>Located in Charlotte, NC and a recent graduate from the Full Stack Web Devlolpment Boot Camp, hosted by UNC Charlotte.
+        Ryan is currenlty in search of new challenges to leverage his web development know-how along with established problem solving skills gained from an extensive Mechainical Engineering background.
+        Allow Ryan to shape your website or software dream into a reality!
     </p>
     <br>
     <hr style="width:90%">
@@ -121,12 +134,31 @@ a {
     <div>
       <h2>My Skills</h2>
       <br>
-      <p>Node.js</p>
-      <p>Bootstrap</p>
-      <p>MySQL</p>
-      <p>Mongo DB</p>
-      <p>React</p>
-      <p>Github</p>
+      <div class="row iconDiv">
+        <i id="skillIcon" class="fab fa-html5"></i>
+        <i id="skillIcon" class="fab fa-css3-alt"></i>
+        <i id="skillIcon" class="fab fa-js"></i>
+      </div>
+      <br>
+      <br>
+      <div class="row iconDiv">
+          <span id="skillIcon"><img src="./icons/bootstrap.png" style="margin-left:100px; width: 200px"></span>
+          <span id="skillIcon"><img src="./icons/mongoDB.png" style="width: 300px"></span>
+      </div>
+      <br>
+      <div class="row iconDiv">
+          <i id="skillIcon" class="fab fa-node"></i>
+          <i id="skillIcon" class="fab fa-react"></i>
+          <i id="skillIcon" class="fab fa-github"></i>
+      </div>
+      <br>
+      <br>
+      <div class="row iconDiv">
+          <span id="skillIcon"><img src="./icons/jquery.png" style="margin-left:100px; width: 200px"></span>
+          <span id="skillIcon"><img src="./icons/mySQL.png" style="width: 300px"></span>
+      </div>
+      
+      
     </div>
     <br>
     <br>
